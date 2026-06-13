@@ -66,8 +66,7 @@
 	### Phase 1
 	
 	Terraform-managed DynamoDB deployment
-	
-	```text
+	---
 	Terraform
 	↓
 	AWS Provider
@@ -77,7 +76,6 @@
 	
 	### Current Resource
 	
-	```text
 	DynamoDB Table
 	└── itl-systems-dev-client-inquiries
 	```
@@ -92,7 +90,6 @@
 	
 	## Terraform Project Structure
 	
-	```text
 	itl-systems-iac
 	├── provider.tf
 	├── variables.tf
@@ -131,7 +128,6 @@
 	
 	Serverless Inquiry API
 	
-	```text
 	API Gateway
 	↓
 	Lambda
@@ -143,7 +139,6 @@
 	
 	Static Website Hosting
 	
-	```text
 	CloudFront
 	↓
 	S3 Static Website
@@ -153,7 +148,6 @@
 	
 	Production Deployment
 	
-	```text
 	Client
 	↓
 	CloudFront
@@ -179,4 +173,15 @@
 	
 	* Terraform
 	* Infrastructure as Code
-* AWS Cloud Services
+
+* Terraform
+↓
+Infrastructure Automation
+
+Lambda
+↓
+Serverless Compute
+
+DynamoDB
+↓
+Serverless Database
