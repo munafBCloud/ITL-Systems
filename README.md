@@ -160,17 +160,6 @@ Expand the serverless backend by implementing REST API endpoints for creating an
 * Terraform
 * Python
 * Git & GitHub
-
-### Skills Demonstrated
-
-* REST API Development
-* Serverless Architecture
-* Infrastructure as Code (Terraform)
-* IAM Policy Management
-* DynamoDB CRUD Operations
-* API Testing and Debugging
-* Cloud Infrastructure Deployment
-
 	
 	### Phase 4
 	
