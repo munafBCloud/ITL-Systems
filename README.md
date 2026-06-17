@@ -136,14 +136,41 @@
 - Backend foundation established for future services
 	```
 	
-	### Phase 3
-	
-	Static Website Hosting
-	
-	CloudFront
-	↓
-	S3 Static Website
-	```
+	## Phase 3 - Build and Test REST API
+
+### Objective
+
+Expand the serverless backend by implementing REST API endpoints for creating and retrieving client inquiries.
+
+### Completed
+
+* Created a health check endpoint (`GET /`) to verify API availability.
+* Implemented a `POST /inquiries` endpoint using AWS Lambda to validate requests and store client inquiries in Amazon DynamoDB.
+* Implemented a `GET /inquiries` endpoint to retrieve inquiry records from DynamoDB.
+* Configured API Gateway routes and Lambda integrations for all endpoints.
+* Updated IAM policies to grant least-privilege access for DynamoDB `PutItem` and `Scan` operations.
+* Tested all endpoints using `curl` and verified successful end-to-end communication between API Gateway, Lambda, and DynamoDB.
+
+### Technologies
+
+* AWS Lambda
+* Amazon API Gateway (HTTP API)
+* Amazon DynamoDB
+* AWS IAM
+* Terraform
+* Python
+* Git & GitHub
+
+### Skills Demonstrated
+
+* REST API Development
+* Serverless Architecture
+* Infrastructure as Code (Terraform)
+* IAM Policy Management
+* DynamoDB CRUD Operations
+* API Testing and Debugging
+* Cloud Infrastructure Deployment
+
 	
 	### Phase 4
 	
