@@ -35,7 +35,8 @@ data "aws_iam_policy_document" "lambda_dynamodb_policy" {
     effect = "Allow"
 
     actions = [
-      "dynamodb:PutItem"
+      "dynamodb:PutItem",
+      "dynamodb:Scan"
     ]
 
     resources = [

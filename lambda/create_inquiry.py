@@ -13,6 +13,41 @@ table = dynamodb.Table(os.environ["TABLE_NAME"])
 def lambda_handler(event, context):
 
     try:
+
+        # Determine what type of request API Gateway sent us
+        method = event["requestContext"]["http"]["method"]
+        path = event["requestContext"]["http"]["path"]
+
+        # Handle GET /
+        if method == "GET" and path.endswith("/"):
+           return {
+              "statusCode": 200,
+              "headers": {
+                  "Access-Control-Allow-Origin": "*",
+                  "Access-Control-Allow-Headers": "Content-Type",
+                  "Access-Control-Allow-Methods": "OPTIONS,GET,POST"
+              },
+              "body": json.dumps({
+                  "message": "ITL Systems API is running."
+              })
+           }
+        if method == "GET" and path.endswith("/inquiries"):
+            response = table.scan()
+            inquiries = response.get("Items",[])
+
+            return {
+               "statusCode": 200,
+               "headers": {
+                   "Access-Control-Allow-Origin": "*",
+                   "Access-Control-Allow-Headers": "Content-Type",
+                   "Access-Control-Allow-Methods": "OPTION,GET,POST"
+               },
+               "body": json.dumps({
+                  "count": len(inquiries),
+                  "inquiries": inquiries
+               })
+            }
+
         # Read the request body
         body = json.loads(event.get("body", "{}"))
 
