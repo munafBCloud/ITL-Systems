@@ -13,7 +13,7 @@
                           ▼
                   AWS Lambda (Python)
                           │
-                  boto3 SDK (AWS SDK)
+                  boto3 Pyhton (AWS)
                           │
                           ▼
                  Amazon DynamoDB Table
