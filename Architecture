@@ -1,0 +1,22 @@
+                        User
+                          │
+                          ▼
+                 HTML / CSS / JavaScript
+                          │
+                     HTTP POST
+                          │
+                          ▼
+                  Amazon API Gateway
+                          │
+                    AWS_PROXY Integration
+                          │
+                          ▼
+                  AWS Lambda (Python)
+                          │
+                  boto3 SDK (AWS SDK)
+                          │
+                          ▼
+                 Amazon DynamoDB Table
+                          │
+                          ▼
+                   Stored Inquiry Data
