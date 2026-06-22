@@ -61,3 +61,13 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 
 }
+
+resource "aws_iam_user_policy_attachment" "terraform_dev_route53_access" {
+  user       = "terraform-dev-user"
+  policy_arn = "arn:aws:iam::aws:policy/AmazonRoute53FullAccess"
+}
+
+resource "aws_iam_user_policy_attachment" "terraform_dev_acm_access" {
+  user       = "terraform-dev-user"
+  policy_arn = "arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess"
+}
