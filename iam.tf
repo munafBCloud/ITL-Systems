@@ -71,3 +71,8 @@ resource "aws_iam_user_policy_attachment" "terraform_dev_acm_access" {
   user       = "terraform-dev-user"
   policy_arn = "arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess"
 }
+
+resource "aws_iam_user_policy_attachment" "terraform_dev_cloudfront_access" {
+  user       = "terraform-dev-user"
+  policy_arn = "arn:aws:iam::aws:policy/CloudFrontFullAccess"
+}
