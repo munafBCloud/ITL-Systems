@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Systems</title>
+
+  <style>
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  color: #7dd3fc;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #020617;
+  color: white;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+button.button {
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#formMessage {
+  margin-top: 15px;
+  color: #38bdf8;
+  font-weight: bold;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+header {
+  background-image:
+    linear-gradient(
+      rgba(2, 6, 23, 0.20),
+      rgba(15, 23, 42, 0.45)
+    ),
+    url('ITL-SYSB.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 650px;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+    header h1 {
+      font-size: 58px;
+      color: white;
+      margin-bottom: 15px;
+      text-shadow: 0px 0px 20px rgba(56, 189, 248, 0.9);
+    }
+
+header .tagline {
+  color: #38bdf8;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  text-shadow: 0px 0px 12px rgba(56, 189, 248, 0.9);
+}
+    header p {
+      color: #f8fafc;
+      font-size: 21px;
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.6;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
+    }
+
+.button {
+  display: inline-block;
+  padding: 14px 26px;
+  background-color: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0px 0px 18px rgba(56, 189, 248, 0.7);
+}
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #38bdf8;
+      font-size: 30px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1e293b;
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid #334155;
+    }
+
+    .card h3 {
+      color: #7dd3fc;
+      margin-top: 0;
+    }
+
+    .card p,
+    li {
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      background-color: #020617;
+      border-left: 5px solid #38bdf8;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 25px;
+    }
+
+    footer {
+      background-color: #020617;
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero-content">
+  <div class="tagline">
+    Cloud • Security • Media • Marketing
+  </div>
+</div>
+</header>
+
+  <section>
+    <h2>Our Services</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Secure Wi-Fi Setup</h3>
+        <p>
+          We review your router settings, Wi-Fi password strength, encryption,
+          and basic security configuration.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Guest Network Setup</h3>
+        <p>
+          We help separate visitors and smart devices from your main personal
+          or business network.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>DNS Filtering</h3>
+        <p>
+          We configure safer browsing protection to help block malicious websites
+          and suspicious domains.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Device Security Review</h3>
+        <p>
+          We check basic security settings for laptops, phones, smart TVs,
+          cameras, and IoT devices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Home Network Security Matters</h2>
+
+    <div class="highlight">
+      <p>
+        Most homes now have phones, laptops, tablets, gaming systems, cameras,
+        smart TVs, and work devices connected to the same network. One weak
+        device can create risk for the entire home or small business.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Who We Help</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Families</h3>
+        <p>
+          Safer browsing, stronger Wi-Fi, and better protection for shared home devices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Remote Workers</h3>
+        <p>
+          Improved home network hygiene for people handling work files and online
+          meetings from home.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Small Businesses</h3>
+        <p>
+          Basic network hardening and practical cybersecurity recommendations
+          without enterprise complexity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+  <h2>Request a Consultation</h2>
+
+  <div class="card">
+    <form id="inquiryForm">
+      <label>Company Name</label>
+      <input type="text" id="companyName" placeholder="Your company name">
+
+      <label>Contact Name</label>
+      <input type="text" id="contactName" placeholder="Your full name" required>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+
+      <label>Phone</label>
+      <input type="tel" id="phone" placeholder="555-555-5555" required>
+
+      <label>Service Type</label>
+      <select id="serviceType" required>
+        <option value="">Select a service</option>
+        <option value="Secure Wi-Fi Setup">Secure Wi-Fi Setup</option>
+        <option value="Guest Network Setup">Guest Network Setup</option>
+        <option value="DNS Filtering">DNS Filtering</option>
+        <option value="Device Security Review">Device Security Review</option>
+        <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
+      </select>
+
+      <label>Message</label>
+      <textarea id="message" rows="5" placeholder="Tell us what you need help with"></textarea>
+
+      <button type="submit" class="button">Submit Request</button>
+    </form>
+
+    <p id="formMessage"></p>
+  </div>
+</section>
+
+  <section>
+    <h2>Contact</h2>
+
+    <div class="card">
+      <p><strong>Email:</strong> yourname@example.com</p>
+      <p><strong>Location:</strong> Miami, FL</p>
+      <p><strong>Service Area:</strong> Miami-Dade and surrounding areas</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 ITL Systems. All rights reserved.</p>
+  </footer>
+
+<script>
+console.log("ITL form script loaded");
+
+  const API_URL = "https://x7uxhbqddl.execute-api.us-east-1.amazonaws.com/dev/inquiries";
+
+  document.getElementById("inquiryForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const inquiry = {
+      companyName: document.getElementById("companyName").value,
+      contactName: document.getElementById("contactName").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      serviceType: document.getElementById("serviceType").value,
+      message: document.getElementById("message").value
+    };
+
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(inquiry)
+    });
+
+    const result = await response.json();
+
+    document.getElementById("formMessage").textContent = result.message;
+
+    if (response.ok) {
+      document.getElementById("inquiryForm").reset();
+    }
+  });
+</script>
+
+</body>
+</html>
