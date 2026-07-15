@@ -51,12 +51,19 @@ def lambda_handler(event, context):
         # Read the request body
         body = json.loads(event.get("body", "{}"))
 
+        contactName = body.get("contactName", "").strip()
+        email = body.get("email", "").strip()
+        phone = body.get("phone", "").strip()
+        serviceType = body.get("serviceType", "").strip()
+        companyName = body.get("companyName", "").strip()
+        message = body.get("message", "").strip()
+
         # Simple validation
         if (
-            not body.get("contactName") or
-            not body.get("email") or
-            not body.get("phone") or
-            not body.get("serviceType")
+            not contactName or
+            not email or
+            not phone or
+            not serviceType
         ):
             return {
                 "statusCode": 400,
@@ -69,16 +76,36 @@ def lambda_handler(event, context):
                     "message": "contactName, email, phone, and serviceType are required."
                 })
             }
+        # Maximum-length validation
+        if (
+            len(companyName) > 100 or
+            len(contactName) > 100 or
+            len(email) > 254 or
+            len(phone) > 30 or
+            len(serviceType) > 100 or
+            len(message) > 2000
+        ):
+            return {
+                "statusCode": 400,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Headers": "Content-Type",
+                    "Access-Control-Allow-Methods": "OPTIONS,POST"
+                },
+                "body": json.dumps({
+                    "message": "One or more fields exceed the allowed length."
+                })
+            }
 
         # Create the inquiry record
         inquiry = {
             "inquiryId": str(uuid.uuid4()),
-            "companyName": body.get("companyName", ""),
-            "contactName": body.get("contactName"),
-            "email": body.get("email"),
-            "phone": body.get("phone"),
-            "serviceType": body.get("serviceType"),
-            "message": body.get("message", ""),
+            "companyName": companyName,
+            "contactName": contactName,
+            "email": email,
+            "phone": phone,
+            "serviceType": serviceType,
+            "message": message,
             "status": "New",
             "source": "ITL Systems Website",
             "submittedAt": datetime.now(timezone.utc).isoformat()

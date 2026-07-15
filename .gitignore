@@ -19,3 +19,12 @@ override.tf.json
 # OS files
 .DS_Store
 Thumbs.db
+
+# Generated Lambda packages
+*.zip
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

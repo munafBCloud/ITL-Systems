@@ -384,16 +384,16 @@
   <div class="card">
     <form id="inquiryForm">
       <label>Company Name</label>
-      <input type="text" id="companyName" placeholder="Your company name">
+      <input type="text" id="companyName" placeholder="Your company name" maxlength="100">
 
       <label>Contact Name</label>
-      <input type="text" id="contactName" placeholder="Your full name" required>
+      <input type="text" id="contactName" placeholder="Your full name" maxlength="100" required>
 
       <label>Email</label>
-      <input type="email" id="email" placeholder="you@example.com" required>
+      <input type="email" id="email" placeholder="you@example.com" maxlength="254" required>
 
       <label>Phone</label>
-      <input type="tel" id="phone" placeholder="555-555-5555" required>
+      <input type="tel" id="phone" placeholder="555-555-5555" maxlength="30" required>
 
       <label>Service Type</label>
       <select id="serviceType" required>
@@ -407,7 +407,7 @@
       </select>
 
       <label>Message</label>
-      <textarea id="message" rows="5" placeholder="Tell us what you need help with"></textarea>
+      <textarea id="message" rows="5" maxlength="2000" placeholder="Tell us what you need help with"></textarea>
 
       <button type="submit" class="button">Submit Request</button>
     </form>
@@ -444,7 +444,7 @@
       email: document.getElementById("email").value,
       phone: document.getElementById("phone").value,
       serviceType: document.getElementById("serviceType").value,
-      message: document.getElementById("message").value
+      message: document.getElementById("message").value.trim()
     };
 
     try {
