@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITL Systems | Business Technology Solutions</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+      padding: 28px 8%;
+      min-height: 620px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 90px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.05;
+      margin: 0 0 20px;
+      color: #0f172a;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #475569;
+      max-width: 650px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 15px 28px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .secondary {
+      background: white;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+      margin-left: 12px;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+      border: 1px solid #e2e8f0;
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .workflow-step {
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 14px;
+      margin: 14px 0;
+      border-left: 5px solid #2563eb;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-light {
+      background: #f8fafc;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      text-align: center;
+      color: #64748b;
+      font-size: 18px;
+      max-width: 760px;
+      margin: 0 auto 45px;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+
+    .card p,
+    li {
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .bad {
+      border-left: 5px solid #ef4444;
+    }
+
+    .good {
+      border-left: 5px solid #22c55e;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #334155;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 13px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 15px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    #formMessage {
+      margin-top: 15px;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 28px;
+    }
+
+    @media (max-width: 800px) {
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">ITL Systems</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <h1>Smart Systems. Stronger Businesses.</h1>
+      <p>
+        ITL Systems helps small businesses modernize operations, automate workflows,
+        capture more leads, and build scalable technology solutions without
+        unnecessary complexity.
+      </p>
+
+      <a href="#contact" class="button">Request Consultation</a>
+      <a href="#services" class="button secondary">View Solutions</a>
+    </div>
+
+    <div class="hero-card">
+      <h3>Example Automation Workflow</h3>
+
+      <div class="workflow-step">1. Customer submits inquiry</div>
+      <div class="workflow-step">2. Lead is captured automatically</div>
+      <div class="workflow-step">3. Business receives instant notification</div>
+      <div class="workflow-step">4. Data is stored for follow-up</div>
+
+      <p>
+        We design practical systems that reduce manual work and help businesses
+        respond faster.
+      </p>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <h2>Business Technology Solutions</h2>
+  <p class="section-intro">
+    We build practical digital systems for small businesses that need better
+    organization, faster follow-up, and smarter operations.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>AI Lead Follow-Up Systems</h3>
+      <p>Recover missed opportunities with instant customer follow-up and intelligent lead qualification.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚙️</div>
+      <h3>CRM & Workflow Automation</h3>
+      <p>Organize customer data, automate repetitive tasks, and improve team efficiency.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">☁️</div>
+      <h3>Cloud Solutions</h3>
+      <p>Build scalable forms, APIs, dashboards, and business systems using modern cloud technology.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Data & Dashboards</h3>
+      <p>Turn business information into clear reporting and actionable insights.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌐</div>
+      <h3>Digital Presence</h3>
+      <p>Create modern websites and digital tools that help customers connect with your business.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔐</div>
+      <h3>Security Consulting</h3>
+      <p>Practical technology protection and system hygiene for growing businesses.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-light">
+  <h2>Problems We Help Solve</h2>
+
+  <div class="split">
+    <div class="card bad">
+      <h3>Before ITL Systems</h3>
+      <ul>
+        <li>Missed customer calls and slow follow-up</li>
+        <li>Manual spreadsheets and duplicated work</li>
+        <li>Customer information scattered across tools</li>
+        <li>No clear visibility into leads or operations</li>
+      </ul>
+    </div>
+
+    <div class="card good">
+      <h3>After ITL Systems</h3>
+      <ul>
+        <li>Automated lead capture and follow-up</li>
+        <li>Organized customer data and workflows</li>
+        <li>Faster response times and fewer missed opportunities</li>
+        <li>Simple reporting for better decisions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>Our Process</h2>
+  <p class="section-intro">
+    We focus on understanding how your business works before building the solution.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>1. Discover</h3>
+      <p>We review your current workflow, pain points, and business goals.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Design</h3>
+      <p>We map the right solution before automating anything.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Build</h3>
+      <p>We create the website, workflow, dashboard, or automation system.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. Improve</h3>
+      <p>We review results, collect feedback, and refine the system.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-light">
+  <h2>Request a Consultation</h2>
+  <p class="section-intro">
+    Tell us what you need help with, and we’ll follow up to discuss the best solution.
+  </p>
+
+  <div class="card">
+    <form id="inquiryForm">
+      <label>Company Name</label>
+      <input type="text" id="companyName" placeholder="Your company name" maxlength="100">
+
+      <label>Contact Name</label>
+      <input type="text" id="contactName" placeholder="Your full name" maxlength="100" required>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="you@example.com" maxlength="254" required>
+
+      <label>Phone</label>
+      <input type="tel" id="phone" placeholder="555-555-5555" maxlength="30" required>
+
+      <label>Service Type</label>
+      <select id="serviceType" required>
+        <option value="">Select a service</option>
+        <option value="AI Lead Follow-Up Systems">AI Lead Follow-Up Systems</option>
+        <option value="CRM & Workflow Automation">CRM & Workflow Automation</option>
+        <option value="Cloud Solutions">Cloud Solutions</option>
+        <option value="Data & Dashboards">Data & Dashboards</option>
+        <option value="Digital Presence">Digital Presence</option>
+        <option value="Security Consulting">Security Consulting</option>
+      </select>
+
+      <label>Message</label>
+      <textarea id="message" rows="5" maxlength="2000" placeholder="Tell us what you need help with"></textarea>
+
+      <button type="submit" class="button">Submit Request</button>
+    </form>
+
+    <p id="formMessage"></p>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+
+  <div class="card">
+    <p><strong>Email:</strong> info@itlsystems.com</p>
+    <p><strong>Location:</strong> Miami, FL</p>
+    <p><strong>Service Area:</strong> Small businesses, local service providers, and growing teams.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ITL Systems. All rights reserved.</p>
+</footer>
+
+<script>
+  console.log("ITL form script loaded");
+
+  const API_URL = "https://x7uxhbqddl.execute-api.us-east-1.amazonaws.com/dev/inquiries";
+
+  document.getElementById("inquiryForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const inquiry = {
+      companyName: document.getElementById("companyName").value,
+      contactName: document.getElementById("contactName").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      serviceType: document.getElementById("serviceType").value,
+      message: document.getElementById("message").value.trim()
+    };
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(inquiry)
+      });
+
+      const result = await response.json();
+      document.getElementById("formMessage").textContent = result.message;
+
+      if (response.ok) {
+        document.getElementById("inquiryForm").reset();
+      }
+    } catch (error) {
+      document.getElementById("formMessage").textContent =
+        "There was an error submitting your request. Please try again.";
+    }
+  });
+</script>
+
+</body>
+</html>
